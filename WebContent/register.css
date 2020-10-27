@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+*{
+	margin:0px;
+	padding:0px;
+	box-sizing:border-box;
+}
+
+body .main{
+	position:relative;
+	border:2px solid red;	
+}
+
+body .main #heading{
+	/* border:2px solid red; */
+	text-align:center;
+	padding:10px;
+	color:#ff8000;
+	font-family: 'Varela Round', sans-serif;
+}
+body .main #form{
+	position:absolute;
+	top:60px;
+	left:320px;
+	width:40%;
+	height:600px;
+	/* border:2px solid red; */
+	text-align:center;
+	font-family: 'Varela Round', sans-serif;
+}
+
+body .main #name{
+	border:2px solid red;
+	padding:5px;
+}
+
