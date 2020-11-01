@@ -1,10 +1,14 @@
 package com.dattu.model;
 
 import java.sql.Connection;
+
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+
+//import com.dattu.controller.ArrayList;
 
 public class Model {
 	
@@ -16,9 +20,19 @@ public class Model {
 	private int bal;
 	private String email;
 	private int phone;
+	private int raccno;
+	private ResultSet res=null;
 	private Connection con=null;  
 	private PreparedStatement pstmt=null;
-	
+	public ArrayList al=new ArrayList();
+	public ArrayList sal=new ArrayList();
+	public ArrayList ral=new ArrayList();
+	public int getRaccno() {
+		return raccno;
+	}
+	public void setRaccno(int raccno) {
+		this.raccno = raccno;
+	}
 	public String getName() {
 		return name; 
 	}
@@ -142,6 +156,76 @@ public class Model {
 		{
 			return true;
 		}
+		return false;
+	}
+	@SuppressWarnings("resource")
+	public boolean transfer() throws SQLException {
+		
+		String sql5 ="select * from BankingApplication.cust_details where accno=? ";
+		pstmt=con.prepareStatement(sql5);
+		pstmt.setInt(1,raccno);
+		 res=pstmt.executeQuery();
+		
+		while(res.next()) {
+			String sql6 = "update BankingApplication.cust_details set balance=balance-? where accno = ?";
+			pstmt=con.prepareStatement(sql6);
+			pstmt.setInt(1, bal);
+			pstmt.setInt(2,accno);
+			int y1=pstmt.executeUpdate();
+			if(y1>0)
+			{
+				int x=res.getInt("balance");
+				if(x>0) {
+					String s3="update BankingApplication.cust_details set balance=balnace+? where accno=? ";
+					pstmt=con.prepareStatement(s3);
+					pstmt.setInt(1, bal);
+					pstmt.setInt(2,raccno);
+					int y2=pstmt.executeUpdate();
+					if(y2>0) {
+						String s4="insert into GetStatement  values(?,?,?)";
+						pstmt=con.prepareStatement(s4);
+						pstmt.setInt(1,accno);
+						pstmt.setInt(2, raccno);
+						pstmt.setInt(3, bal);
+						int y=pstmt.executeUpdate();
+						if(y>0) {
+							return true;
+						}
+						else {
+							return false;  
+						}
+					}
+				}
+				else{
+					return false;
+				}
+			}
+		}
+		return false;
+	}
+	public ArrayList getStatement() throws SQLException  {
+        String s="select * from GetStatement where accno=?";
+        pstmt=con.prepareStatement(s);
+        pstmt.setInt(1,accno);
+        res = pstmt.executeQuery();
+        while(res.next()) {
+        	sal.add(res.getInt("ACCNO"));
+        	ral.add(res.getInt("RACCNO"));
+        	al.add(res.getInt("BALANCE"));
+        }
+		return al;
+	}
+	public boolean applyloan() throws SQLException {
+        String s="select * from BankingApplication.cust_details where accno=?";
+        pstmt=con.prepareStatement(s);
+        pstmt.setInt(1,accno);
+        res = pstmt.executeQuery();
+        while(res.next())
+        {
+        	 name=res.getString("NAME");
+        	 email=res.getString("EMAIL");
+        	 return true;
+        }
 		return false;
 	}
 }

@@ -29,7 +29,7 @@ public class ChangePassword extends HttpServlet {
 				response.sendRedirect("/BankingApplication/ChangePwdSuccess.html");
 			}
 			else {
-				response.sendRedirect("/BankingApplication/ ChangePwdFail.html");
+				response.sendRedirect("/BankingApplication/ChangePwdFail.html");
 			}
 		}
 		catch(Exception e)
