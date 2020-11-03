@@ -5,32 +5,105 @@
 	padding:0px;
 	box-sizing:border-box;
 }
-
-body .main{
-	position:relative;
-	border:2px solid red;	
+#navbar{
+	background-color:#194553;
+	width:100%;
+	height:50px;
+	/* border:2px solid red;*/
 }
 
-body .main #heading{
-	/* border:2px solid red; */
-	text-align:center;
+#navbar h3{
+	color:white;
+	float :left;
 	padding:10px;
-	color:#ff8000;
-	font-family: 'Varela Round', sans-serif;
+	padding-left:70px;
+	font-size:20px;
+} 
+#navbar span{
+	font-family: 'Arimo', sans-serif;
+	font-size:24px;
+	text-shadow:2px 2px 3px green;
 }
-body .main #form{
-	position:absolute;
-	top:60px;
-	left:320px;
-	width:40%;
-	height:600px;
-	/* border:2px solid red; */
-	text-align:center;
-	font-family: 'Varela Round', sans-serif;
+#navbar ul {
+	float:right;
+	
+}
+#navbar ul li {
+    list-style-type:none;
+    display:inline-block;
+    margin:10px; 
+}
+#navbar ul li a{
+	color:white;
+	padding-right:10px;
+	font-family: 'Arimo', sans-serif;
+	text-decoration:none;
+	font-size:20px;
+}
+#navbar ul li a:hover{
+	cursor:pointer;
+	color:black;
+	text-decoration:underline;
+}
+.form
+{
+    width:500px;
+    height:800px;
+    padding:10px;
+    position: absolute;
+    top:8%;
+    left:35%;
+  
+    /* background-color:#191919; */
+}
+.form .Registration{
+    text-align: center;
+    font-family: 'Balsamiq Sans', cursive;
+    font-family: 'Sriracha', cursive;   
+    padding:25px auto 15px;
+    /* border:2px solid red; */
+}
+.form label{
+    font-size: 20px;
+    font-family: 'Sriracha', cursive;
+    padding:5px;
+    margin-left: 20px;
+}
+.form input[type="text"],input[type="password"],input[type="email"],input[type="tel"],input[type="number"]
+{
+    margin-left:20px;
+    width:85%;
+    padding:10px;
+    border:2px solid black;
+    border-radius: 25px;
+    outline: none;
+    transition: .6s;
 }
 
-body .main #name{
-	border:2px solid red;
-	padding:5px;
+.form input[type="text"]:hover,input[type="password"]:hover,
+.form input[type="email"]:hover,input[type="tel"]:hover
+{
+    width:300px;
+    color:black;
+    border-color:grey;
+    transition: .6s;
+    background-color:grey;
 }
-
+.form input[type="submit"],.form input[type="reset"]
+{
+    border: 2px solid black;
+    outline:none;
+    border-radius: 25px;
+    padding: 10px 25px;
+    /* background:grey; */
+    text-align: center;
+    margin: 25px ;
+    transition:1s;
+    color:black;
+    cursor:pointer;
+}
+.form input[type="submit"]:hover,.form input[type="reset"]:hover
+{
+    background:grey; 
+    border-color:grey;
+}
