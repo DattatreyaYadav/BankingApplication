@@ -35,13 +35,13 @@
 		<servlet-name>Registration</servlet-name>
 		<servlet-class>com.dattu.controller.Registration</servlet-class>
 	</servlet>
-	<servlet>
+	 <servlet>
 		<description>
 		</description>
 		<display-name> login</display-name>
 		<servlet-name> login</servlet-name>
 		<servlet-class>com.dattu.controller.login</servlet-class>
-	</servlet>
+	</servlet> 
 	<servlet>
 		<description>
 		</description>

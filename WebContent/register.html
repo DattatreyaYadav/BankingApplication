@@ -3,41 +3,58 @@
 <head>
 <meta charset="UTF-8">
 <title>Registration form</title>
+<!-- google font link -->
+<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital@1&family=Sriracha&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="register.css">
 </head>
 <body>
 <div class="main">
-<div id="heading">
- <h2>Registration Form</h2>
- </div>
- <div id="form">
+<div id="navbar">
+    <h3><span><i class="fa fa-university" aria-hidden="true"></i> Tree</span> Bank</h3>
+    <ul>
+    <li><a id="a1" href="Welcome.html">Home</a> <br></li>
+    <li><a id="a2" href="login.html">Login</a></li>
+   </ul>
+</div>
+ <div class="form">
+  
+  <div class="Registration"><h2>Registration Form</h2></div>
     <form action="Registration">
-     <label id="custid">Customer_Id</label>
-     <input type="number" name="custid"><br><br>
+    
+     <label for="custid">Customer_Id</label>
+     <input type="number" name="custid" id="custid" placeholder="Enter Customer_ID Number"><br><br>
      
-     <label id="name">NAME</label>
-     <input type="text" name="name"><br><br>
-    
-     <label id="accno">Account Number</label>
-     <input type="number" name="accno"><br><br>
-    
-     <label id="balance">Balance</label>
-     <input type="number" name="balance"><br><br>
+     <label for="name">Enter Name</label> <br>
+     <input type="text" id="name" name="name" placeholder="Enter Your Name"> <br>
      
-     <label id="phone">Phone number</label>
-     <input type="number" name="phone"><br><br>
-    
-     <label id="email">Email</label>
-     <input type="email" name="email"><br><br>
-        
-     <label id="pwd">Password</label>
-     <input type="password" name="pwd"><br><br>
-    
-     <label id="conf_pwd">Confirm Password</label>
-     <input type="password" name="conf_pwd"><br><br>
+     <label for="balance">Balance</label>
+     <input type="number" name="balance" id="balance" placeholder="Enter Balance Amount"><br><br>
      
-     <input type="submit"/>
+     <label for="accno">Account Number</label>
+     <input type="number" name="accno" id="accno" placeholder="Enter Account Number"><br><br>
+    
+              <!--   <label>Gender</label> <br> -->
+                <!-- <input type="radio" id="male" name="gender" value="male">
+                <label for="male" class="gender">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female"class="gender">Female</label>
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other" class="gender">Other</label><br> -->
+    <label for="email">Email_Id</label> <br>
+    <input type="text" id="email" name="email" placeholder="ABC@gmail.com"> <br>
+    
+    <label for="phone">Phone Number</label> <br>
+    <input type="tel" id="phone" name="phone" placeholder="9876543210"> <br>
+      
+    <label for="password">Password</label> <br>
+    <input type="password" id="password" name="password" placeholder="Enter password"> <br>
+    
+    <label for="c_password">Confirm Password</label> <br>
+    <input type="password" id="c_password" name="conf_password" placeholder="Confirm password"> <br>
+    
+    <input type="submit" name="submit" value="SUBMIT">
+    <input type="reset" name="reset" value="RESET">
     </form>
     </div>
     </div>

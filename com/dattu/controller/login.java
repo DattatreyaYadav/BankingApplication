@@ -2,6 +2,7 @@ package com.dattu.controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
+
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -15,11 +16,13 @@ public class login extends HttpServlet {
     private HttpSession session=null;
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
 	{
-		
+		System.out.println("hello");
 		String scust_id = request.getParameter("custid");
+		
 		int cust_id=Integer.parseInt(scust_id);
 		
-		String pwd = request.getParameter("pwd");
+		String pwd = request.getParameter("password");
+		// creating a session to store the data for further use
 		session=request.getSession(true);
 		
 		try 

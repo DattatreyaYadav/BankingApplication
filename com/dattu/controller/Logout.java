@@ -15,7 +15,7 @@ public class Logout extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	 HttpSession session=request.getSession();
      session.invalidate();
-	 response.sendRedirect("/BankingApplication/Login.html");
+	 response.sendRedirect("/BankingApplication/Welcome.html");
 	}
 
 }

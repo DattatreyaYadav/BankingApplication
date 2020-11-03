@@ -16,20 +16,24 @@ public class Transfer extends HttpServlet {
 	
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     
+		// user account number taken from session
 		HttpSession session=request.getSession();
 		int accno=(int) session.getAttribute("accno");
 		
 		String samt=request.getParameter("amt");
 		int amt= Integer.parseInt(samt);
+		
+	    // receiver account number taken from user interface
 		String sraccno=request.getParameter("raccno");
 		int raccno= Integer.parseInt(sraccno);
 		
 		
 		try {
+			
 			Model m=new Model();
 			m.setAccno(accno);
 			m.setRaccno(raccno);
-			m.setBal(amt);
+			m.setAmount(amt);
 			boolean result= m.transfer();
 			 if(result) {
 				 response.sendRedirect("/BankingApplication/Transfersuccess.html");	 

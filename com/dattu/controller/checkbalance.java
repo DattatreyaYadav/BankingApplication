@@ -25,7 +25,7 @@ public class checkbalance extends HttpServlet {
         	
         	if(result)
         	{
-        		session.setAttribute("bal",m.getBal());
+        		session.setAttribute("bal",m.getBalance());
         		response.sendRedirect("/BankingApplication/BalanceView.jsp");
         	}
         	else

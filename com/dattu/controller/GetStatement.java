@@ -23,7 +23,8 @@ public class GetStatement extends HttpServlet {
 	try {
 		 Model m=new Model();
 		 m.setAccno(accno);
-		 ArrayList al=m.getStatement();
+		 
+		 ArrayList<?> al = m.getStatement();
 		 
 		 if(al.isEmpty()==true)
 		 {
@@ -33,7 +34,7 @@ public class GetStatement extends HttpServlet {
 			 session.setAttribute("sal",m.sal);
 			 session.setAttribute("ral",m.ral);
 			 session.setAttribute("al",m.al);
-			 response.sendRedirect("/BankingApplication/StatementSuccess.html");
+			 response.sendRedirect("/BankingApplication/StatementSuccess.jsp");
 		 }
 	}
 	catch(Exception e){
