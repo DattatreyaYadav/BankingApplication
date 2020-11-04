@@ -164,7 +164,7 @@ public class Model {
 		return false;
 	}
 	public boolean changePwd() throws SQLException {
-		String sql4="update BankingApplication.cust_details set password=? where accno=?";
+		String sql4="update BankingApplication.cust_details set pwd=? where accno=?";
 		pstmt=con.prepareStatement(sql4);
 		pstmt.setString(1,pwd);
 		pstmt.setInt(2,accno);
