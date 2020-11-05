@@ -3,19 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <title>Transfer amount page</title>
+<!-- google font link -->
+<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital@1&family=Sriracha&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="transfer.css">
 </head>
 <body>
- <h3> please enter the amount to be transfered</h3>
- 
- <form action="Transfer">
- <label>accno</label>
- <input type="text" name="raccno"><br>
- 
- 
- <label>amount</label>
- <input type="text" name="amt"><br>
- <input type="submit">
- 
+<div id="navbar">
+    <h3><span><i class="fa fa-university" aria-hidden="true"></i> Tree</span> Bank</h3>
+    <ul>
+    <li><a id="a1" href="home.html">Home</a> <br></li>
+    <li><a id="a2" href="Logout">logout</a></li>
+   </ul>
+</div>
+
+<h3>Enter details to Transfer Amount</h3>
+ <div class="main">
+<form action="Transfer">
+<label for="accno">Account Number</label>
+<input type="number" name="accno" id="accno" placeholder="Enter your Account Number"><br>
+
+<label for="amount">Enter Amount</label>
+<input type="number" name="amount" id="amount" placeholder="Enter Amount"><br>
+
+<input type="submit" id="submit" value="Submit">
+  
  </form>
+ </div>
 </body>
 </html>

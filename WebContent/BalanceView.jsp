@@ -9,6 +9,7 @@
 <body>
  <%
      session=request.getSession();
+     out.println("your balance is :");
      out.println(session.getAttribute("bal"));
  %>
 </body>

@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>succcess page</title>
+<title>success page</title>
 </head>
 <body>
 <%
