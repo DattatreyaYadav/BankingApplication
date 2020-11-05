@@ -2,26 +2,33 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>loan page</title>
+<title>Insert title here</title>
+<!-- google font link -->
 <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital@1&family=Sriracha&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="Applyloan.css">
+<link rel="stylesheet" href="deposit.css">
 </head>
 <body>
-<div id="navbar">
+ <div id="navbar">
     <h3><span><i class="fa fa-university" aria-hidden="true"></i> Tree</span> Bank</h3>
     <ul>
     <li><a id="a1" href="home.html">Home</a> <br></li>
     <li><a id="a2" href="Logout">logout</a></li>
    </ul>
 </div>
-  <h2>Select the loan you wish to apply for.</h2>
-  
-  <a href="loan"><span>Education loan</span></a><br><br>
-  <a href="loan"><span>Marriage loan</span></a><br><br>
-  <a href="loan"><span>House loan</span></a><br><br>
-  <a href="loan"><span>Gold loan</span></a><br><br>
-  <a href="loan"><span>Car loan</span></a><br><br>
-   
+
+<h3>Deposit Money</h3>
+<div class="main">
+<form action="Deposit">
+<label for="accno">Account Number</label>
+<input type="number" name="accno" id="accno" placeholder="Enter your Account Number"><br>
+
+<label for="amount">Enter Amount</label>
+<input type="number" name="amount" id="amount" placeholder="Enter Amount"><br>
+
+<input type="submit" id="submit" value="Submit">
+
+</form>
+</div>
 </body>
 </html>

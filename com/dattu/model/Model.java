@@ -305,5 +305,18 @@ public class Model {
         }
 		return false;
 	}
+	public boolean deposit() throws SQLException {
+		String s4="update BankingApplication.cust_details set balance=balnace+? where accno=? ";
+		pstmt=con.prepareStatement(s4);
+		pstmt.setInt(1, amount);
+		pstmt.setInt(2,accno);
+		int y2=pstmt.executeUpdate();
+		if(y2>0)
+		{
+			return true;
+		}
+		return false;
+	}
+	
 	
 }

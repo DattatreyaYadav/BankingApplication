@@ -5,7 +5,7 @@
 	box-sizing:border-box;
 }
 #navbar{
-	background-color:black;
+	background-color:#194553;
 	width:100%;
 	height:50px;
 	/* border:2px solid red;*/
@@ -49,7 +49,7 @@
 	/* border:2px solid red; */
 	padding:10px;
 	text-align:center;
-	background-color:#194553;
+	background-color:#202020;
 	color:white;
     font-size:20px;
 	font-family: 'Arimo', sans-serif;
@@ -57,21 +57,21 @@
 .h3{
 	padding:10px;
 	text-align:left;
-	background-color:#194553;
+	background-color:#202020;
 	color:white;
     font-size:20px;
 	font-family: 'Arimo', sans-serif;
 }
 
 .main{
-	border:2px solid red;
+	/* border:2px solid red; */
 	width:100%;
-	height:500px;
+	height:550px;
 	position:relative;
 	background-color:#202020;
 }
 .main .main1{
-	border:2px solid red;
+	/* border:2px solid red; */
 	width:100%;
 	height:250px;
 }
@@ -80,13 +80,92 @@
 	width:30%;
 	height:240px;
 	margin:10px;
-	display:inline-block;
+	/* display:inline-block; */
+	
 	background-color:black;
 	color:white;
-	box-shadow:4px 4px 4px #393939;
+	/* box-shadow:4px 4px 4px #393939; */
+	border-radius:10px;
+	text-decoration:none;
+	text-align:center;
+	position:relative;	
+	float:left;
+	
+}
+.main .main1 a #one{
+	position:absolute;	
+/* 	border:2px solid red;  */
+	margin-top:100px;
+	margin-left:-80px;
+	padding:10px;
+	font-size:25px;
+}
+.main .main1 a:hover{
+	box-shadow:4px 4px 5px white;
+	color:green;
+}
+.main .main1 a #two{
+	position:absolute;	
+/* 	border:2px solid red;  */
+	margin-top:100px;
+	margin-left:-80px;
+	padding:10px;
+	font-size:25px;
+}
+.main .main1 a #three{
+	position:absolute;	
+/* 	border:2px solid red;  */
+	margin-top:100px;
+	margin-left:-80px;
+	padding:10px;
+	font-size:25px;
 }
 .main .main2{
-	border:2px solid red;
+	/* border:2px solid red; */
 	width:100%;
 	height:250px;
+}
+.main .main2 a{
+	/* border:2px solid red; */
+	width:30%;
+	height:240px;
+	margin:10px;
+	display:inline-block;
+	float:left;
+	background-color:black;
+	color:white;
+	/* box-shadow:4px 4px 4px #393939; */
+	border-radius:10px;
+	text-decoration:none;
+	text-align:center;
+	position:relative;	
+	
+}
+.main .main2 a #one{
+	position:absolute;	
+/* 	border:2px solid red;  */
+	margin-top:100px;
+	margin-left:-80px;
+	padding:10px;
+	font-size:25px;
+}
+.main .main2 a:hover{
+	box-shadow:4px 4px 5px white;
+	color:green;
+}
+.main .main2 a #two{
+	position:absolute;	
+/* 	border:2px solid red;  */
+	margin-top:100px;
+	margin-left:-80px;
+	padding:10px;
+	font-size:25px;
+}
+.main .main2 a #three{
+	position:absolute;	
+/* 	border:2px solid red;  */
+	margin-top:100px;
+	margin-left:-80px;
+	padding:10px;
+	font-size:25px;
 }
